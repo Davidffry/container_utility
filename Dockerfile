@@ -8,6 +8,8 @@ LABEL minor_version="0"
 WORKDIR /root
 
 RUN apk update 
-RUN apk add git curl vim 
+RUN apk add git curl vim rsync
+
+COPY .vimrc .
 
 CMD ['sh']
